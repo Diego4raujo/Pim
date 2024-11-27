@@ -1,0 +1,205 @@
+﻿
+@font-face {
+    font-family: Quicksand;
+    src: url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand.ttf)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner-mae {
+    width: auto;
+    height: 100vh;
+}
+
+.home {
+    box-sizing: border-box;
+    width: auto;
+    height: 100vh;
+    /* background-image: url('../images/blue.jpg'); */
+    background-color: #253252;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-titulo-desc {
+    font-family: Quicksand;
+    color: lightblue;
+    text-align: center !important;
+    line-height: 3em;
+}
+
+.titulo-home {
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.descricao-home {
+    font-size: 1em;
+}
+
+.box-titulo-desc:hover {
+    text-shadow: 0.1em 0.2em 0.1em rgb(13, 25, 36);
+}
+/* home up*/
+.conteiner-middle {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    background-color: #253252;
+    height: 100vh;
+    width: auto;
+}
+
+.box-titulo {
+    font-family: Quicksand;
+    font-size: 1em;
+    color: lightblue;
+    /* -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color:lightgrey; */
+}
+
+.box-servicos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.produtos, .fornecedores, .plantacoes {
+    margin: 2em;
+    text-align: center;
+}
+
+.servicos-descricao {
+    font-family: Quicksand;
+    font-size: 1em;
+    color: lightblue;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+/* middle up*/
+.footer-fornecedores {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #253252;
+    max-height: 100vh;
+    width: auto;
+}
+
+.forms-1 {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+    /* padding-top: 3em; */
+    margin: 6em 2em;
+    /* align-items: left; */
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.forms-1 {
+    display: flex;
+    flex-direction: column;
+    font-family: Quicksand;
+    color: white;
+}
+
+
+/* .f1-titulo {
+  font-size: 1.3em;
+  /* text-shadow: #ff5e00 0.1em 0.1em 0.1em; }*/
+
+
+form {
+    max-width: 80em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: block;
+    margin: 5px 0 5px;
+    text-align: left;
+}
+
+input, select, textarea {
+    width: 30vw !important;
+    padding: 8px;
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+}
+
+textarea {
+    height: 16vh;
+}
+
+#produto {
+    width: 31.4vw !important;
+}
+
+.botao-forms {
+    padding: 0.5em;
+    width: 10em;
+    background-color: #ffffff;
+    color: rgb(14, 24, 48);
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+    .botao-forms:hover {
+        background-color: #5068f0;
+        color: white;
+    }
+
+textarea {
+    resize: none;
+}
+
+.copyright {
+    color: white;
+    margin-top: -2em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-family: Quicksand;
+}
+
+.f1-titulo {
+    margin-bottom: 1em;
+    margin-top: -2em;
+    color: lightblue;
+    font-size: 2em;
+    font-family: Quicksand;
+    text-align: center;
+    font-weight: bold;
+}
+
+img {
+    width: 21em;
+    height: 21em;
+    border-radius: 1em;
+}
+
+    img:hover {
+        box-shadow: #ADD8E6 0.2em -0.2em;
+    }

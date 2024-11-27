@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Pim2.Data.Pedido>
+
+<h1>Lista de Pedidos</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>CNPJ Cliente</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Valor Unitário</th>
+            <th>Valor Total</th>
+            <th>Data Criação</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pedido in Model)
+        {
+            <tr>
+                <td>@pedido.Id</td>
+                <td>@pedido.CNPJCliente</td>
+                <td>@pedido.Produto</td>
+                <td>@pedido.QuantidadeProduto</td>
+                <td>@pedido.ValorUnit</td>
+                <td>@pedido.ValorTotal</td>
+                <td>@pedido.DataCriacao.ToString("dd/MM/yyyy HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,8 +1,93 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿﻿@{
+    ViewData["Title"] = "VOLK | Sua Fazenda Inteligente";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/css/home.css" asp-append-version="true" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="conteiner-mae">
+        <div class="home">
+            <div class="box-titulo-desc">
+                <div class="titulo-home">
+                    VOLK
+                </div>
+                <div class="descricao-home">
+                    <h4>Sua Fazenda Inteligente</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteiner-middle">
+            <div class="box-titulo">
+                <h1>Conheça nossos Serviços!</h1>
+            </div>
+            <div class="box-servicos">
+                <!-- Usando asp:HyperLink para navegação para a página de produtos -->
+                <a href="@Url.Action("Produtos")">
+                    <div class="produtos">
+                        <div class="servicos-imagem">
+                            <img src="~/images/produtos.jpg" alt="produtos" />
+                        </div>
+                        <div class="servicos-descricao">
+                            <h2>Produtos</h2>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Usando asp:HyperLink para navegação para a página de Pedidos -->
+                <a href="@Url.Action("Pedidos")">
+                    <div class="Pedidos">
+                        <div class="servicos-imagem">
+                            <img src="~/images/fornecedor.jpg" alt="Pedidos" />
+                        </div>
+                        <div class="servicos-descricao">
+                            <h2>Pedidos</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-Pedidos">
+            <div class="forms">
+                <div class="forms-1">
+                    <div class="f1-titulo">
+                        Entre em contato!
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="a6353a25-ea1d-4891-9ba6-a5ff8bf6902c">
+
+                        <label for="cnpj">CNPJ:</label>
+                        <input type="text" id="cnpj" name="CNPJ" required>
+
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="e-mail" name="Email" required>
+
+                        <label for="descricao">Qual o assunto?</label>
+                        <textarea id="descricao" name="Descricao" rows="4" required></textarea>
+
+                        <button class="botao-forms" type="submit">Enviar</button>
+                    </form>
+
+                    @if (ViewBag.Message != null)
+                    {
+                        <div>@ViewBag.Message</div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Made with ❤️ by VOLK &copy; 2024</p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
